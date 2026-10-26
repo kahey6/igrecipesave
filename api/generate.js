@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   const { prompt } = req.body;
-  const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // 之後會設定在 Vercel 嘅環境變數
+  const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
   if (!GEMINI_API_KEY) {
     return res.status(500).json({ error: 'Gemini API Key not configured on server' });
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     if (!response.ok) {
-      return res.status(response.status).json({ error: data.error?.message || 'Gemini API error' });
+      return res.status(400).json({ error: data.error?.message || 'Gemini API error' });
     }
 
     return res.status(200).json(data);
