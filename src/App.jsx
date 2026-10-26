@@ -40,7 +40,7 @@ import {
 
 // ==================== 1. FIREBASE 設定 ====================
 const firebaseConfig = {
-  apiKey: "AIzaSyBB7KFhJuLPQUvN7FhP2UCrnFF0jaZp19E",
+  apiKey: "AIzaSyAkqiaaSS1K-EuW-wbd0dnbA9dr5dM3a-8",
   authDomain: "igrecipesave.firebaseapp.com",
   projectId: "igrecipesave",
   storageBucket: "igrecipesave.firebasestorage.app",
